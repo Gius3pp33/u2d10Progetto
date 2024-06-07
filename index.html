@@ -11,7 +11,13 @@
       crossorigin="anonymous"
     />
   </head>
-  
+  <style>
+    .card:hover{
+        transform: scale(1.1);
+        transition: transform 0.3s ease-in-out;
+        cursor: pointer;
+    }
+  </style>
 
   <body class="bg-black">
     <!-- navbar -->
@@ -96,11 +102,11 @@
     <section class="container-fluid mt-4 ">
       <div class="d-flex container-fluid align-items-center">
         <h2 class="text-white">Tv Shows</h2>
-        <div class="dropdown">
+        <div class="dropdown ">
             <button class="btn btn-secondary bg-black dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-              Dropdown button
+              Genres
             </button>
-            <ul class="dropdown-menu">
+            <ul class="dropdown-menu ml-5">
               <li><a class="dropdown-item" href="#">Action</a></li>
               <li><a class="dropdown-item" href="#">Comedy</a></li>
               <li><a class="dropdown-item" href="#">Horror</a></li>
