@@ -22,20 +22,46 @@
     }
     .overlay-icon {
       position: absolute;
-      bottom: 10px;
-      left: 10px;
-      border: solid 1px black;
+      bottom: 5px;
+      left: 5px;
+      border: solid 3px black;
       border-radius: 50%;
       cursor: pointer;
+      background-color: black;
+      box-shadow: 1px, 1px, 1px black;
+    }
+    input[type="checkbox"] {
+      accent-color: grey;
+      background-color: transparent;
+      width: 20px;
+      height: 20px;
+      cursor: pointer;
+    }
+    .form-check-input:checked {
+      background-color: transparent !important;
+      border: 0;
+      border-radius: unset;
+      border: solid 2px grey;
+    }
+    .form-check-input:focus,
+    .label::after,
+    label.form-check-label:focus,
+    .form-check-input::after,
+    .form-check-input:not(:disabled):not(.disabled):active:focus {
+      border-radius: unset;
+
+      box-shadow: 0 0 0 0.1rem transparent !important;
+      border: 2px solid grey;
+      background-color: transparent;
     }
 
     .btn:hover {
       background-color: white;
-      color: black;
+      color: grey;
     }
   </style>
 
-  <body class="bg-black text-white">
+  <body class="bg-dark text-white">
     <div class="container-fluid">
       <div class="navbar">
         <a class="" href="./index.html"
@@ -53,40 +79,38 @@
         <div class="col-md-3">
           <div class="profile-image">
             <img
-              src="./28b22a54c96662989843912cfceff789a6bae093.png"
+              src="./assets/avatar.png"
               class="img-fluid"
               alt="Profile Image"
             />
             <div class="overlay-icon">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                width="16"
-                height="16"
-                fill="black"
-                class="bi bi-pencil"
-                viewBox="0 0 16 16"
+                height="15px"
+                fill="white"
+                viewBox="0 0 512 512"
               >
                 <path
-                  d="M12.146.146a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1 0 .708l-10 10a.5.5 0 0 1-.168.11l-5 2a.5.5 0 0 1-.65-.65l2-5a.5.5 0 0 1 .11-.168zM11.207 2.5 13.5 4.793 14.793 3.5 12.5 1.207zm1.586 3L10.5 3.207 4 9.707V10h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.293zm-9.761 5.175-.106.106-1.528 3.821 3.821-1.528.106-.106A.5.5 0 0 1 5 12.5V12h-.5a.5.5 0 0 1-.5-.5V11h-.5a.5.5 0 0 1-.468-.325"
+                  d="M362.7 19.3L314.3 67.7 444.3 197.7l48.4-48.4c25-25 25-65.5 0-90.5L453.3 19.3c-25-25-65.5-25-90.5 0zm-71 71L58.6 323.5c-10.4 10.4-18 23.3-22.2 37.4L1 481.2C-1.5 489.7 .8 498.8 7 505s15.3 8.5 23.7 6.1l120.3-35.4c14.1-4.2 27-11.8 37.4-22.2L421.7 220.3 291.7 90.3z"
                 />
               </svg>
             </div>
           </div>
         </div>
-        <!-- Colonna per il resto del contenuto -->
-        <div class="col-md-9">
+        <!-- Colonna per il resto  -->
+        <div class="col-md-9 mb-4">
           <div class="btn btn-secondary w-100 mb-3 px-5">Strive Student</div>
           <h3 class="lead">Language:</h3>
           <div class="dropdown">
             <button
-              class="btn btn-secondary bg-black dropdown-toggle"
+              class="btn btn-secondary bg-dark dropdown-toggle"
               type="button"
               data-bs-toggle="dropdown"
               aria-expanded="false"
             >
               English
             </button>
-            <ul class="dropdown-menu">
+            <ul class="dropdown-menu dropdown-menu-dark">
               <li><a class="dropdown-item" href="#">Italian</a></li>
               <li><a class="dropdown-item" href="#">Russian</a></li>
               <li><a class="dropdown-item" href="#">Spanish</a></li>
@@ -112,7 +136,12 @@
           <div class="form-group">
             <p class="lead">Autoplay controls</p>
             <div class="form-check">
-              <input class="form-check-input" type="checkbox" checked />
+              <input
+                class="form-check-input"
+                type="checkbox"
+                class="black"
+                checked
+              />
               <label class="form-check-label"
                 >Autoplay next episode in a series on all devices.</label
               >
@@ -124,27 +153,17 @@
               >
             </div>
           </div>
-          <hr />
-          <button
-            type="button"
-            class="btn btn-transparent text-secondary border border-secondary"
-          >
-            SAVE
-          </button>
-          <button
-            type="button"
-            class="btn btn-transparent text-secondary border border-secondary"
-
-          >
-            CANCEL
-          </button>
-          <button
-            type="button"
-            class="btn btn-transparent text-secondary border border-secondary"
-          >
-            DELETE PROFILE
-          </button>
+        
         </div>
+        <hr>
+        <div class="row w-100"> 
+  
+          <div class="d-flex justify-content-around"> 
+
+              <button class="col-2  btn btn-trasparent text-secondary border border-secondary border rounded-0">SAVE</button>
+              <button class="col-3  btn btn-trasparent text-secondary border border-secondary border rounded-0">CANCEL</button>
+              <button class="col-6  btn btn-trasparent text-secondary border border-secondary border rounded-0 ms-3" >DELETE PROFILE</button>
+      </div>
       </div>
     </div>
     <script
